@@ -59,39 +59,193 @@ Precedence level Operator Meaning
 13 and Logical AND
 14 (Lowest) or Logical OR
 
-#### Code Samples
+#### **Code Samples**
 
+```python
 a = 4
 b = 11
 print(a | b)
 print(a >> 2)
+```
 
 output:
+
+```text
 15
 1
+```
 
-Explanation:
+**Explanation**:
 Bitwise right shift operator(>>): The a’s value is moved right by the 2 bits.
 
+```python
 x = 100
 y = 50
 print(x and y)
+```
 
 output:
-50
 
-Explanation:
+```text
+50
+```
+
+**Explanation**:
 In Python, When we join two non-Boolean values using a and operator, the value of the expression is the second operands, not True or False.
 
+```python
 a = [10, 20]
 b = a
 b += [30, 40]
 print(a)
 print(b)
+```
 
 output:
-[10, 20, 30, 40]
-[10, 20, 30, 40]
 
-Explanation:
+```text
+[10, 20, 30, 40]
+[10, 20, 30, 40]
+```
+
+**Explanation**:
 Because both b and a refer to the same object, when we use addition assignment += on b, it changes both a and b
+
+### **File Handling**
+
+![Alt text](https://pynative.com/wp-content/uploads/2021/07/file_handling_in_python.png "Title")
+
+**File Access Modes**
+
+<table>
+<thead>
+<tr>
+<th><strong>Mode</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>It opens an existing file to read-only mode. The file pointer exists at the beginning.</td>
+</tr>
+<tr>
+<td><code>rb</code></td>
+<td>It opens the file to read-only in binary format. The file pointer exists at the beginning.</td>
+</tr>
+<tr>
+<td><code>r+</code></td>
+<td>It opens the file to read and write both. The file pointer exists at the beginning.</td>
+</tr>
+<tr>
+<td><code>rb+</code></td>
+<td>It opens the file to read and write both in binary format. The file pointer exists at the beginning of the file.</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>It opens the file to write only. It overwrites the file if previously exists or creates a new one if no file exists with the same name.</td>
+</tr>
+<tr>
+<td><code>wb</code></td>
+<td>It opens the file to write only in binary format. It overwrites the file if it exists previously or creates a new one if no file exists.</td>
+</tr>
+<tr>
+<td><code>w+</code></td>
+<td>It opens the file to write and read data. It will override existing data.</td>
+</tr>
+<tr>
+<td><code>wb+</code></td>
+<td>It opens the file to write and read both in binary format</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>It opens the file in the append mode. It will not override existing data. It creates a new file if no file exists with the same name.</td>
+</tr>
+<tr>
+<td><code>ab</code></td>
+<td>It opens the file in the append mode in binary format.</td>
+</tr>
+<tr>
+<td><code>a+</code></td>
+<td>It opens a file to append and read both.</td>
+</tr>
+<tr>
+<td><code>ab+</code></td>
+<td>It opens a file to append and read both in binary format.</td>
+</tr>
+</tbody>
+</table>
+
+#### **Writing File**
+
+```python
+text = "This is new content"
+# writing new content to the file
+fp = open("write_demo.txt", 'w')
+fp.write(text)
+print('Done Writing')
+fp.close()
+```
+
+#### **File Methods**
+
+<table>
+<thead>
+<tr>
+<th><strong>Mode</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>It opens an existing file to read-only mode. The file pointer exists at the beginning.</td>
+</tr>
+<tr>
+<td><code>rb</code></td>
+<td>It opens the file to read-only in binary format. The file pointer exists at the beginning.</td>
+</tr>
+<tr>
+<td><code>r+</code></td>
+<td>It opens the file to read and write both. The file pointer exists at the beginning.</td>
+</tr>
+<tr>
+<td><code>rb+</code></td>
+<td>It opens the file to read and write both in binary format. The file pointer exists at the beginning of the file.</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>It opens the file to write only. It overwrites the file if previously exists or creates a new one if no file exists with the same name.</td>
+</tr>
+<tr>
+<td><code>wb</code></td>
+<td>It opens the file to write only in binary format. It overwrites the file if it exists previously or creates a new one if no file exists.</td>
+</tr>
+<tr>
+<td><code>w+</code></td>
+<td>It opens the file to write and read data. It will override existing data.</td>
+</tr>
+<tr>
+<td><code>wb+</code></td>
+<td>It opens the file to write and read both in binary format</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>It opens the file in the append mode. It will not override existing data. It creates a new file if no file exists with the same name.</td>
+</tr>
+<tr>
+<td><code>ab</code></td>
+<td>It opens the file in the append mode in binary format.</td>
+</tr>
+<tr>
+<td><code>a+</code></td>
+<td>It opens a file to append and read both.</td>
+</tr>
+<tr>
+<td><code>ab+</code></td>
+<td>It opens a file to append and read both in binary format.</td>
+</tr>
+</tbody>
+</table>
+
+### **Functions**
