@@ -249,3 +249,97 @@ fp.close()
 </table>
 
 ### **Functions**
+
+Sample 1
+
+```python
+def outer_fun(a, b):
+    def inner_fun(c, d):
+        return c + d
+    return inner_fun(a, b)
+
+res = outer_fun(5, 10)
+print(res)
+```
+
+Solution
+
+```python
+15
+```
+
+Sample 2
+
+```python
+def fun1(name, age=20):
+    print(name, age)
+
+fun1('Emma', 25)
+```
+
+```python
+Emma 25
+```
+
+Explanation:
+
+We can specify default values for arguments when defining a function. the function uses the default value if the value for an argument is missing in a function call.
+
+Sample 3
+
+```python
+def display(**kwargs):
+    for i in kwargs:
+        print(i)
+
+display(emp="Kelly", salary=9000)
+```
+
+```python
+emp
+salary
+```
+
+Explanation:
+
+To accept Variable Length of Keyword Arguments, i.e., To create functions that take n number of Keyword arguments we use **kwargs (prefix a parameter name with a double asterisk ** ).
+
+keyword arguments: display(emp="Kelly", salary=9000)
+
+This \*\*kwargs collects all passed arguments into a new dictionary, where the argument names are the keys, and their values are the key’s values.
+
+So to get the values we need to iterate the kwargs dictionary like this
+
+Sample 4
+
+```python
+def add(a, b):
+    return a+5, b+5
+
+result = add(3, 2)
+print(result)
+```
+
+```python
+(8, 7)
+```
+
+Explanation:
+
+In Python, we can return multiple values from a function. You can do this by separating return values with a comma.
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
